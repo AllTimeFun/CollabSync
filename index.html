@@ -1,126 +1,181 @@
+<!-- CollabSync Landing Page - HTML & CSS Only -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CollabSync</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; background-color: #f4f4f4; color: #333; }
-    header { background: #5865F2; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; color: #fff; }
-    header nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
+    :root {
+      --primary: #5865F2;
+      --light-gray: #f4f4f4;
+      --text: #333;
+      --background: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--background);
+      color: var(--text);
+    }
+
+    header {
+      background: var(--primary);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
     .hero {
-      background: linear-gradient(to right, #5865F2, #7e87f5);
-      color: white;
       text-align: center;
-      padding: 100px 20px;
+      padding: 5rem 2rem;
+      background: linear-gradient(to right, #5865F2, #8c9eff);
+      color: white;
     }
-    .hero h1 { font-size: 3rem; margin-bottom: 10px; }
-    .hero p { font-size: 1.2rem; margin-bottom: 30px; }
-    .cta-button {
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero button {
       background: white;
-      color: #5865F2;
-      padding: 12px 25px;
-      border-radius: 25px;
-      font-weight: bold;
-      text-decoration: none;
+      color: var(--primary);
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
     }
 
     .features {
-      padding: 60px 20px;
-      background: #fff;
-      text-align: center;
-    }
-    .features h2 { font-size: 2rem; margin-bottom: 40px; color: #5865F2; }
-    .feature-grid {
+      padding: 4rem 2rem;
+      background-color: var(--light-gray);
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-      max-width: 1000px;
-      margin: 0 auto;
+      gap: 2rem;
     }
+
     .feature-card {
-      background: #f1f1f1;
-      padding: 20px;
-      border-radius: 12px;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .feature-card h3 {
+      margin-bottom: 1rem;
+      color: var(--primary);
     }
 
     .about {
-      padding: 60px 20px;
-      background: #f9f9f9;
+      padding: 4rem 2rem;
       text-align: center;
     }
-    .about h2 { color: #5865F2; margin-bottom: 20px; }
-    .about p { max-width: 600px; margin: 0 auto; font-size: 1rem; line-height: 1.6; }
+
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      max-width: 600px;
+      margin: auto;
+    }
 
     footer {
-      background: #2c2f33;
-      color: #ccc;
+      background-color: var(--primary);
+      color: white;
       text-align: center;
-      padding: 30px 20px;
+      padding: 2rem;
+      font-size: 0.9rem;
     }
-    footer a { color: #ccc; margin: 0 10px; text-decoration: none; }
+
+    footer a {
+      color: white;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
   </style>
 </head>
+
 <body>
+  <header>
+    <div class="logo">
+      <img src="CollabSync-removebg-preview.png" alt="CollabSync Logo" style="height: 40px;">
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#invite">Invite</a>
+      <a href="#support">Support</a>
+    </nav>
+  </header>
 
-<header>
-  <img src="CollabSync-removebg-preview.png" alt="CollabSync Logo" height="40">
-  <nav>
-    <a href="#">Home</a>
-    <a href="#features">Features</a>
-    <a href="#about">About</a>
-    <a href="#invite">Invite</a>
-    <a href="#support">Support</a>
-  </nav>
-</header>
+  <section class="hero" id="home">
+    <h1>CollabSync</h1>
+    <p>Streamline Your Community. Sync with Ease.</p>
+    <button>Invite to Discord</button>
+  </section>
 
-<section class="hero">
-  <h1>CollabSync</h1>
-  <p>Streamline Your Community. Sync with Ease.</p>
-  <a class="cta-button" href="#invite">Invite to Discord</a>
-</section>
-
-<section class="features" id="features">
-  <h2>Features</h2>
-  <div class="feature-grid">
+  <section class="features" id="features">
     <div class="feature-card">
-      <h3>Real-time Collaboration</h3>
-      <p>Engage members with seamless, live interaction tools.</p>
+      <h3>🤝 Real-time Collaboration</h3>
+      <p>Enable seamless teamwork and project management.</p>
     </div>
     <div class="feature-card">
-      <h3>Task & Event Sync</h3>
-      <p>Schedule and sync community tasks and events in one place.</p>
+      <h3>📆 Task & Event Sync</h3>
+      <p>Automatically synchronize events and deadlines.</p>
     </div>
     <div class="feature-card">
-      <h3>Custom Commands</h3>
-      <p>Create dynamic, personalized commands for your server.</p>
+      <h3>🛠️ Custom Commands</h3>
+      <p>Create custom responses and shortcuts for your server.</p>
     </div>
     <div class="feature-card">
-      <h3>User Roles & Moderation</h3>
-      <p>Powerful tools to manage your members with ease.</p>
+      <h3>🛡️ User Roles & Moderation</h3>
+      <p>Manage community roles and ensure smooth moderation.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="about" id="about">
-  <h2>About CollabSync</h2>
-  <p>
-    Created by @bhavyag and @vanitasxyl, CollabSync was built with the idea of enhancing collaboration, syncing communities effortlessly, and providing a modern toolset for seamless Discord management.
-  </p>
-</section>
+  <section class="about" id="about">
+    <h2>About CollabSync</h2>
+    <p>Created by <strong>@bhavyag</strong> & <strong>@vanitasxyl</strong>, CollabSync is built to enhance Discord community experience by merging collaboration, productivity, and management into a single bot.</p>
+  </section>
 
-<footer>
-  <p>
-    Connect with us:
-    <a href="#">LinkedIn</a> |
-    <a href="#">GitHub</a> |
-    <a href="#">Discord</a>
-  </p>
-  <p>© 2025 CollabSync. All rights reserved.</p>
-</footer>
-
+  <footer>
+    <p>
+      Connect with us:
+      <a href="#">LinkedIn</a> |
+      <a href="#">GitHub</a> |
+      <a href="#">Discord</a>
+    </p>
+    <p>© 2025 CollabSync. All rights reserved.</p>
+  </footer>
 </body>
+
 </html>
